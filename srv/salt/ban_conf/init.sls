@@ -4,6 +4,10 @@ fail2ban:
 /etc/fail2ban/jail.local:
   file.managed:
     - source: salt://ban_conf/jail.local
+    - template: jinja
+    - context:
+      bantime: {{ pillar['bantime'] }}
+      email: {{ pillar['email'] }}
 
 fail2ban_service:
   service.running:

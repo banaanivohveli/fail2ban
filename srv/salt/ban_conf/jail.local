@@ -18,7 +18,8 @@
 # # See man 5 jail.conf for details.
 # #
 # # [DEFAULT]
-# # bantime = 3600
+bantime = {{bantime}}
+
 # #
 # # [sshd]
 # # enabled = true
@@ -126,7 +127,7 @@
 # 
 # # Destination email address used solely for the interpolations in
 # # jail.{conf,local,d/*} configuration files.
-# destemail = root@localhost
+destemail = {{email}}
 # 
 # # Sender email address used solely for some actions
 # sender = root@localhost
