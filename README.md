@@ -1,6 +1,6 @@
 # Fail2Ban auto-conf and install
 
-## How to use:
+## How to use
 
 If you don't have Salt-Minion and/or Git:
 
@@ -13,7 +13,13 @@ If you have both of them:
 	cd fail2ban
 	bash suola.sh
 
-## Editing values:
+## Editing values
 
-Change the values in /srv/pillar/ files to what pleases you. As default bantime is 30 minutes (1800 seconds).
+Change the values in /srv/pillar/ files to whatever pleases you. Default bantime is 30 minutes (1800 seconds).
 After changing a value remember to run suola.sh again.
+
+## Sources
+
+Tero Karvinen's website http://terokarvinen.com/
+Tero Karvinen's sirotin https://github.com/terokarvinen/sirotin
+Digital Ocean's Fail2Ban guide https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-14-04
