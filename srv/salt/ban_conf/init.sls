@@ -6,10 +6,10 @@ fail2ban:
     - source: salt://ban_conf/jail.local
     - template: jinja
     - context:
-      bantime: {{ pillar['bantime'] }}
-      findtime: {{ pillar['findtime'] }}
-      maxretry: {{ pillar['maxretry'] }}
-      email: {{ pillar['email'] }}
+      bantime: {{ pillar.get('bantime', '3600') }}
+      findtime: {{ pillar.get('findtime', '600') }}
+      maxretry: {{ pillar.get('maxretry', '5') }}
+      email: {{ pillar.get('email', 'root@localhost') }}
 
 fail2ban_service:
   service.running:
