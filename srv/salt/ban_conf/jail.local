@@ -61,10 +61,10 @@ bantime  = {{bantime}}
 # 
 # # A host is banned if it has generated "maxretry" during the last "findtime"
 # # seconds.
-findtime  = 600
+findtime  = {{findtime}}
 # 
 # # "maxretry" is the number of failures before a host get banned.
-maxretry = 5
+maxretry = {{maxretry}}
 # 
 # # "backend" specifies the backend used to get files modification.
 # # Available options are "pyinotify", "gamin", "polling", "systemd" and "auto".
@@ -135,7 +135,7 @@ destemail = {{email}}
 # # E-mail action. Since 0.8.1 Fail2Ban uses sendmail MTA for the
 # # mailing. Change mta configuration parameter to mail if you want to
 # # revert to conventional 'mail'.
-# mta = sendmail
+mta = sendmail
 # 
 # # Default protocol
 # protocol = tcp

@@ -7,6 +7,8 @@ fail2ban:
     - template: jinja
     - context:
       bantime: {{ pillar['bantime'] }}
+      findtime: {{ pillar['findtime'] }}
+      maxretry: {{ pillar['maxretry'] }}
       email: {{ pillar['email'] }}
 
 fail2ban_service:
